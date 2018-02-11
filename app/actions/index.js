@@ -10,14 +10,16 @@ export function fetchHeadlines() {
   };
 }
 
-export function fetchHeadlinesSuccess() {
+export function fetchHeadlinesSuccess(articles) {
   return {
-    type: FETCH_HEADLINES_SUCCESS
+    type: FETCH_HEADLINES_SUCCESS,
+    articles
   };
 }
 
-export function fetchHeadlinesFail() {
+export function fetchHeadlinesFail(err) {
   return {
-    type: FETCH_HEADLINES_FAIL
+    type: FETCH_HEADLINES_FAIL,
+    err
   };
 }

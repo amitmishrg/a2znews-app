@@ -1,6 +1,6 @@
 export const InitialState = {
   headlines: {
-    article: [],
+    articles: [],
     loader: false
   }
 }
