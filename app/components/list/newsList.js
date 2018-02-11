@@ -4,7 +4,7 @@ const { View, Text, StatusBar } = require('react-native');
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 
-// import { getHeadlines } from '../../selector/index';
+import { getHeadlines } from '../../selector/index';
 import { fetchHeadlines } from '../../actions/index';
 
 class NewsList extends Component {
@@ -27,7 +27,7 @@ export function mapDispatchToProps(dispatch) {
 }
 
 export const mapStateToProps = createStructuredSelector({
-  //getHeadlines: 'ha'
+  getHeadlines: getHeadlines()
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(NewsList);
